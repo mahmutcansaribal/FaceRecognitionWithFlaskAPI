@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Recognition</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='tespit.css') }}"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <video id="video" width="640" height="480" autoplay></video>
+      <canvas id="canvas" width="640" height="480"></canvas>
+      <img id="result-image" style="display: none" />
+    </div>
+    <div class="button-container">
+      <a href="/"><button type="button">Kayıt Ol</button></a>
+    </div>
+    <script src="{{ url_for('static', filename='tespit.js') }}"></script>
+  </body>
+</html>

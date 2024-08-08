@@ -1,0 +1,54 @@
+/* Sayfa genel stil */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sayfanın yüksekliğini tam ekran yap */
+  margin: 0; /* Varsayılan margin değerlerini kaldır */
+  background-color: white; /* Arka plan rengi */
+  flex-direction: column; /* Butonu video ve canvas'ın altına yerleştirmek için dikey düzen */
+}
+
+/* Video ve canvas stil */
+#container {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  z-index: 1; /* Butondan önce gelmesi için z-index ayarı */
+}
+
+#video,
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#video {
+  z-index: 1;
+}
+
+#canvas {
+  z-index: 2;
+}
+
+/* Buton stili */
+.button-container {
+  margin-top: 10px; /* Buton ile video/canvas arasına boşluk */
+  z-index: 0; /* Video ve canvas'ın altında kalması için z-index ayarı */
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Recognition</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='stil.css') }}"
+    />
+  </head>
+  <body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <div>
+      <button id="fotoCek" onclick="fotoCek()">Fotoğraf Çek</button>
+      <a href="/api/tespitEt"><button type="button">Tespit Et</button></a>
+    </div>
+    <canvas id="resim" style="display: none"></canvas>
+    <img id="photo" alt="" />
+    <form onsubmit="return kullaniciEkle(event);">
+      <label>ADINIZ:</label>
+      <input type="text" id="kAd" name="isim" required /><br /><br />
+      <label>SOY ADINIZ:</label>
+      <input type="text" id="kSad" name="soyisim" required /><br /><br />
+      <button type="submit">Ekle</button>
+    </form>
+  </body>
+  <script src="{{ url_for('static', filename='javas.js') }}"></script>
+</html>
