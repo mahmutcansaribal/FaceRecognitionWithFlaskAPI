@@ -1,0 +1,5 @@
+Flask version: 2.3.2
+OpenCV version: 4.10.0
+face_recognition version: 1.2.3
+Pillow version: 9.4.0
+NumPy version: 1.26.2
